@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/pygameDoc/static/css/main.9ba0b534.css",
-    "main.js": "/pygameDoc/static/js/main.81b8e8b8.js",
+    "main.css": "/pygameDoc/static/css/main.3e4e0887.css",
+    "main.js": "/pygameDoc/static/js/main.bc2461a3.js",
     "static/js/453.011ae560.chunk.js": "/pygameDoc/static/js/453.011ae560.chunk.js",
     "static/media/D2Coding.ttf": "/pygameDoc/static/media/D2Coding.8e1251be588cceb18bae.ttf",
     "static/media/MaplestoryLight.ttf": "/pygameDoc/static/media/MaplestoryLight.9d9497585053c96c8082.ttf",
     "index.html": "/pygameDoc/index.html",
-    "main.9ba0b534.css.map": "/pygameDoc/static/css/main.9ba0b534.css.map",
-    "main.81b8e8b8.js.map": "/pygameDoc/static/js/main.81b8e8b8.js.map",
+    "main.3e4e0887.css.map": "/pygameDoc/static/css/main.3e4e0887.css.map",
+    "main.bc2461a3.js.map": "/pygameDoc/static/js/main.bc2461a3.js.map",
     "453.011ae560.chunk.js.map": "/pygameDoc/static/js/453.011ae560.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ba0b534.css",
-    "static/js/main.81b8e8b8.js"
+    "static/css/main.3e4e0887.css",
+    "static/js/main.bc2461a3.js"
   ]
 }
