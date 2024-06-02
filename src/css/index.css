@@ -1,0 +1,343 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'MaplestoryLight';
+  src: url('../fonts/MaplestoryLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'RegularFont';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.eot?#iefix') format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.ttf') format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'D2Coding';
+  src: url('../fonts/D2Coding.ttf') format('truetype');
+}
+
+.text-font {
+  @apply md:text-base;
+  font-family: 'RegularFont', 'MaplestoryLight';
+  line-height: 34px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(55, 62, 72) !important;
+}
+
+.title-font {
+  font-family: 'MaplestoryLight', 'RegularFont';
+  color: rgb(38, 45, 64);
+  font-weight: bold;
+}
+
+.code-font {
+font-family: 'D2Coding','RegularFont';
+}
+
+
+.input-box {
+  font-family: 'RegularFont', 'MaplestoryLight';
+  color: rgb(80, 94, 97);
+}
+
+
+code[class*="language-"] {
+  counter-reset: step;
+  background-color: transparent !important; /* 배경색을 투명하게 설정 */
+  display: block;
+  line-height: 23px;
+  position: relative;
+  white-space: pre;
+  font-size: 15.3px;
+  overflow: overlay;
+  max-height: 700px;
+  padding: 18px 15px 18px 15px;
+  border-radius: 0px 0px 5px 5px !important;
+  tab-size: 4;
+}
+
+div.line::before {
+  content: counter(step);
+  counter-increment: step;
+  width: 15px;
+  margin-right: 1.2rem;
+  display: inline-block;
+  text-align: right;
+  color: rgba(115, 138, 148, 0.4);
+}
+
+/* 
+.rainbow {
+  background: linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 1) 0%,
+      rgba(255, 154, 0, 1) 10%,
+      rgba(208, 222, 33, 1) 20%,
+      rgba(79, 220, 74, 1) 30%,
+      rgba(63, 218, 216, 1) 40%,
+      rgba(47, 201, 226, 1) 50%,
+      rgba(28, 127, 238, 1) 60%,
+      rgba(95, 21, 242, 1) 70%,
+      rgba(186, 12, 248, 1) 80%,
+      rgba(251, 7, 217, 1) 90%,
+      rgba(255, 0, 0, 1) 100%
+  );
+} */
+
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    transform: scale3d(1.0, 1.0, 1.0);
+    font-size: 36px;
+  }
+
+  20% {
+    transform: scale3d(1.65, 1.65, 1.65);
+    font-size: 59.4px;
+  }
+
+  40% {
+    transform: scale3d(1.35, 1.35, 1.35);
+    font-size: 48.6px;
+  }
+
+  60% {
+    transform: scale3d(1.59, 1.59, 1.59);
+    font-size: 57.24px;
+  }
+
+  80% {
+    transform: scale3d(1.41, 1.41, 1.41);
+    font-size: 50.76px;
+  }
+
+  to {
+    transform: scale3d(1.5, 1.5, 1.5);
+    font-size: 54px;
+  }
+}
+
+.bounceIn {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: bounceIn;
+  will-change: transform;
+}
+
+@keyframes bounceOut {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    transform: scale3d(1.5, 1.5, 1.5);
+    font-size: 54px;
+  }
+
+  20% {
+    transform: scale3d(1.0, 1.0, 1.0);
+    font-size: 36px;
+  }
+
+  40% {
+    transform: scale3d(1.15, 1.15, 1.15);
+    font-size: 41.4px;
+  }
+
+  60% {
+    transform: scale3d(1.0, 1.0, 1.0);
+    font-size: 36px;
+  }
+
+  80% {
+    transform: scale3d(1.04, 1.04, 1.04);
+    font-size: 37.44px;
+  }
+
+  to {
+    transform: scale3d(1.0, 1.0, 1.0);
+    font-size: 36px;
+  }
+}
+
+.bounceOut {
+  animation-duration: 1s;
+  animation-name: bounceOut;
+  will-change: transform;
+}
+
+@keyframes smallBounceIn {
+from,
+20%,
+40%,
+60%,
+80%,
+to {
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+0% {
+  transform: scale3d(1.0, 1.0, 1.0);
+}
+
+20% {
+  transform: scale3d(1.3, 1.3, 1.3);
+}
+
+40% {
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+60% {
+  transform: scale3d(1.24, 1.24, 1.24);
+}
+
+80% {
+  transform: scale3d(1.16, 1.16, 1.16);
+}
+
+to {
+  transform: scale3d(1.2, 1.2, 1.2);
+}
+}
+
+.smallBounceIn {
+animation-duration: 1s;
+animation-fill-mode: forwards;
+animation-name: smallBounceIn;
+will-change: transform;
+}
+
+@keyframes smallBounceOut {
+from,
+20%,
+40%,
+60%,
+80%,
+to {
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+0% {
+  transform: scale3d(1.2, 1.2, 1.2);
+}
+
+20% {
+  transform: scale3d(1.0, 1.0, 1.0);
+}
+
+40% {
+  transform: scale3d(1.08, 1.08, 1.08);
+}
+
+60% {
+  transform: scale3d(1.0, 1.0, 1.0);
+}
+
+80% {
+  transform: scale3d(1.03, 1.03, 1.03);
+}
+
+to {
+  transform: scale3d(1.0, 1.0, 1.0);
+}
+}
+
+.smallBounceOut {
+animation-duration: 1s;
+animation-name: smallBounceOut;
+will-change: transform;
+}
+
+@keyframes bounce {
+from,
+20%,
+40%,
+60%,
+80%,
+to {
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+0% {
+  transform: scale3d(1.0, 1.0, 1.0);
+}
+
+25% {
+  transform: scale3d(1.3, 1.3, 1.3);
+}
+
+50% {
+  transform: scale3d(0.9, 0.9, 0.9);
+}
+
+75% {
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+to {
+  transform: scale3d(1.0, 1.0, 1.0);
+}
+}
+
+.bounce {
+animation-duration: 1s;
+animation-fill-mode: forwards;
+animation-name: bounce;
+}
+
+code::-webkit-scrollbar {
+  width: 16px;  /* 세로축 스크롤바 폭 너비 */
+  height: 16px;  /* 가로축 스크롤바 폭 너비 */
+}
+/* 스크롤바 막대 */
+code::-webkit-scrollbar-thumb {
+  background: linear-gradient(40deg, #ff8a8a 20%, #f771d1 40%, #a18aff 60%, #4cd2ff 80%, #6afc82 100%); /* 스크롤바 막대 색상 */
+  border-radius: 10px;
+  border: 6px solid #282A36;
+}
+
+code::-webkit-scrollbar-corner {
+  background-color: #0000;
+}
+
+::-webkit-scrollbar {
+  width: 16px;  /* 세로축 스크롤바 폭 너비 */
+  height: 16px;  /* 가로축 스크롤바 폭 너비 */
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(40deg, #ff8a8a 20%, #f771d1 40%, #a18aff 60%, #4cd2ff 80%, #6afc82 100%); /* 스크롤바 막대 색상 */
+  border-radius: 10px;
+  border: 6px solid #FFFFFF;
+}
+::-webkit-scrollbar-corner {
+  background-color: #0000;
+}
+
+.rainbow {
+  background: linear-gradient(40deg, #ff8a8a 20%, #f771d1 40%, #a18aff 60%, #4cd2ff 80%, #6afc82 100%);
+}
