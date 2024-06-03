@@ -30,6 +30,14 @@ function Bar2() {
 }
 function Circle(props) {
   const [isHovered, setIsHovered] = useState(false);
+   
+  const scrollToTarget = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="flex items-center">
       {props.type !== "first" ? (
@@ -37,21 +45,21 @@ function Circle(props) {
       ) : (
         <div className="w-16 h-2"></div>
       )}
-      <Link
+      <HashLink
         className={`flex items-center justify-center bg-gradient-to-br ${
           props.gradient
         } rounded-full h-24 w-24 bounceIn text-white font-bold text-4xl ${
           isHovered ? "bounceIn" : "bounceOut"
         }`}
-        to={`/${props.id}`}
+        to={props.type !== "last" ? "/" + props.id : "/"}
         id={`index_${props.id}`}
         onMouseLeave={() => setIsHovered(false)}
         onMouseEnter={() => setIsHovered(true)}
-        onClick={(events) => pop(events)}
+        onClick={(events) => {pop(events);props.id===9&&scrollToTarget("logic");}}
         data-type="circle"
       >
         {props.id}
-      </Link>
+      </HashLink>
       {props.type !== "last" && <Bar1></Bar1>}
     </div>
   );
@@ -68,9 +76,6 @@ function Title(props) {
     >
       <Link
         to={`/${props.id + 1}`}
-        className={
-          ![0, 1, 2, 3, 4, 5].includes(props.id) ? "text-red-500 line-through" : ""
-        }
       >
         {props.title}
       </Link>
@@ -267,9 +272,10 @@ function Main() {
     "화면 흔들림",
   ];
 
+
   const logicList = [];
   for (let i of logics) {
-    logicList.push(<Logic content={i} key={i}></Logic>);
+    logicList.push(<Logic content={i} key={i} id={i==="애니매이션"?"logic":""}></Logic>);
   }
 
   return (

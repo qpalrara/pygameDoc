@@ -14,4 +14,8 @@ export default function P6() {
           title="1. 플레이어와 적"
           description="방향키로 움직일 수 있는 플레이어와 플레이어를 향해 움직이는 적 클래스를 구현해보자."
           importance={4}
-        ></Quiz></div></div>);}
+        ></Quiz>
+      </div>
+    </div>
+  );
+}
